@@ -20,10 +20,8 @@ $days = $days + 1;
         <th class="center"rowspan="2" style="border: solid 1px black;width:50px;">TOTAL AMOUNT</th>
         <th class="center"colspan="<?php echo e(count($deductionitems)); ?>" style="border: solid 1px black">DEDUCTIONS</th>
         <th class="center"rowspan="2" style="border: solid 1px black;width:50px;">TOTAL DEDUCTIONS</th>
-
-        <th colspan="<?php echo e(count($refundtypes)+1); ?>">Refunds</th>
-
-
+        <th class="center"colspan="<?php echo e(count($refundtypes)); ?>" style="border: solid 1px black;">REFUNDS</th>
+        <th class="center"rowspan="2" style="border: solid 1px black;width:50px;">TOTAL REFUND</th>
         <th class="center"rowspan="2" style="border: solid 1px black;width:80px;">NET AMOUNT</th>
         <th class="center"rowspan="2" style="border: solid 1px black">#</th>
         <th class="center"rowspan="2" style="border: solid 1px black;width:150px;">SIGNATURE</th>
@@ -48,10 +46,12 @@ $days = $days + 1;
             <th style="border: solid 1px black" class="center"><?php echo e($deductionitem->name); ?></th>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
+
+
         <?php $__currentLoopData = $refundtypes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $refundtype): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <th style="border: solid 1px black" class="center"><?php echo e($refundtype->title); ?></th>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-        <th style="border: solid 1px black" class="center">TOTAL REFUND</th>
+            <th style="border:solid 1px black" class="center"><?php echo e($refundtype->title); ?></th>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
     </tr>
 
     </thead>
@@ -59,7 +59,7 @@ $days = $days + 1;
     
     <tbody>
 
-    <?php $totalamount=0; $grandtotaldeduction = 0; $totalnetamount = 0; $countemp=1;?>
+    <?php $totalamount=0; $grandtotaldeduction = 0; $totalnetamount = 0; $countemp=1; $grandtotalrefund=0;?>
 
     <?php $__currentLoopData = $payroll->payrollitems->sortByDesc('rate'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $payrollitem): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
@@ -111,9 +111,9 @@ $days = $days + 1;
 
             <?php $__currentLoopData = $deductionitems; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $deductionitem): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
-                <?php $subtotaldeduction=$payrollitem->deductions->where('deductionitem_id','=',$deductionitem->id)->first()['amount'];?>
+                <?php $subtotaldeduction=$payrollitem->getdeductionamount($deductionitem->id);?>
 
-                <td style="border: solid 1px black" class="right number"><?php echo e($subtotaldeduction); ?></td>
+                <td style="border: solid 1px black" class="right number"><?php if($subtotaldeduction==0): ?> - <?php else: ?> <?php echo e($subtotaldeduction); ?> <?php endif; ?></td>
 
                 <?php $totaldeduction+=$subtotaldeduction; ?>
 
@@ -128,38 +128,36 @@ $days = $days + 1;
 
 
 
-            
-
-            <?php $totalrefund = 0;?>
+            <?php $totalrefund=0; $subtotaldeduction=0; ?>
             <?php $__currentLoopData = $refundtypes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $refundtype): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <td style="border: solid 1px black" class="right number">
-
-                    <?php if($payrollitem->refunds->where('refundtype_id','=',$refundtype->id)->first()['amount']!=null): ?>
-
-                        <?php echo e(number_format($payrollitem->refunds->where('refundtype_id','=',$refundtype->id)->first()['amount'],2,'.',',')); ?>
+                    <?php if($payrollitem->getRefundAmount($payrollitem->id,$refundtype->id)!=null): ?>
+                        <?php echo e($payrollitem->getRefundAmount($payrollitem->id,$refundtype->id)->amount); ?>
 
 
-                    <?php else: ?>
+                        <?php $subtotalrefund=$payrollitem->getRefundAmount($payrollitem->id,$refundtype->id)->amount; ?>
 
+                        <?php else: ?>
                         -
-
                     <?php endif; ?>
 
                 </td>
-
+                <?php $totalrefund+=$subtotalrefund; ?>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
-            <td style="border: solid 1px black" class="right number"><?php echo e(number_format($payrollitem->refunds->sum('amount'),2,'.',',')); ?></td>
+            <td style="border:solid 1px black" class="right number"><?php echo e(number_format($payrollitem->refunds->sum('amount'),2,'.',',')); ?></td>
 
-            
 
-            <td style="border: solid 1px black" class="right number"><?php echo e(number_format(($subtotalamount)-$totaldeduction+$payrollitem->refunds->sum('amount'),2,'.',',')); ?></td>
 
+
+            <td style="border: solid 1px black" class="right number"><?php echo e(number_format($subtotalamount-$totaldeduction+$payrollitem->refunds->sum('amount'),2,'.',',')); ?></td>
             <td style="border: solid 1px black"><?php echo e($countemp++); ?></td>
             <td></td>
 
             <?php $totalamount+=$subtotalamount;
-            $grandtotaldeduction+=$totaldeduction; ?>
+            $grandtotaldeduction+=$totaldeduction;
+            $grandtotalrefund+=$totalrefund;
+            ?>
 
         </tr>
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -168,8 +166,8 @@ $days = $days + 1;
         <td colspan="<?php echo e($days+5); ?>" class="center bolder" style="border: solid 1px black" >TOTAL</td>
 
         
-            
-            
+        
+        
         
 
         <td style="border: solid 1px black"  class="right bolder number"><?php echo e(number_format($totalamount,2,'.',',')); ?></td>
@@ -183,11 +181,23 @@ $days = $days + 1;
 
             
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+
         <td style="border: solid 1px black"  class="right bolder number"><?php echo e(number_format($grandtotaldeduction,2,'.',',')); ?></td>
-        <td style="border: solid 1px black"  class="right bolder number"><?php echo e(number_format($totalamount-$grandtotaldeduction,2,'.',',')); ?></td>
+
+        <?php $__currentLoopData = $refundtypes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $refundtype): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
+            <td style="border: solid 1px black"  class="right bolder number"><?php echo e(number_format($payroll->getTotalRefund($refundtype->id),2,'.',',')); ?></td>
+
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+        <td style="border: solid 1px black"  class="right bolder number"><?php echo e(number_format($payroll->getGrandTotalRefund(),2,'.',',')); ?></td>
+
+        <td style="border: solid 1px black"  class="right bolder number"><?php echo e(number_format($totalamount-$grandtotaldeduction+$payroll->getGrandTotalRefund(),2,'.',',')); ?></td>
         <td style="border: solid 1px black"  class="right bolder"></td>
         <td style="border: solid 1px black"  class="right bolder"></td>
     </tr>
 
     </tbody>
-</table><?php /**PATH C:\xampp\htdocs\jopayroll\resources\views/payrolls/print/body_orig.blade.php ENDPATH**/ ?>
+</table>
+<?php /**PATH C:\xampp\htdocs\jopayroll\resources\views/payrolls/print/body_orig.blade.php ENDPATH**/ ?>

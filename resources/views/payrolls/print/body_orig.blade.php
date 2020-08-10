@@ -20,10 +20,8 @@ $days = $days + 1;
         <th class="center"rowspan="2" style="border: solid 1px black;width:50px;">TOTAL AMOUNT</th>
         <th class="center"colspan="{{count($deductionitems)}}" style="border: solid 1px black">DEDUCTIONS</th>
         <th class="center"rowspan="2" style="border: solid 1px black;width:50px;">TOTAL DEDUCTIONS</th>
-
-        <th colspan="{{count($refundtypes)+1}}">Refunds</th>
-
-
+        <th class="center"colspan="{{count($refundtypes)}}" style="border: solid 1px black;">REFUNDS</th>
+        <th class="center"rowspan="2" style="border: solid 1px black;width:50px;">TOTAL REFUND</th>
         <th class="center"rowspan="2" style="border: solid 1px black;width:80px;">NET AMOUNT</th>
         <th class="center"rowspan="2" style="border: solid 1px black">#</th>
         <th class="center"rowspan="2" style="border: solid 1px black;width:150px;">SIGNATURE</th>
@@ -47,10 +45,12 @@ $days = $days + 1;
             <th style="border: solid 1px black" class="center">{{$deductionitem->name}}</th>
         @endforeach
 
+{{-- REFUND --}}
+
         @foreach($refundtypes as $refundtype)
-                <th style="border: solid 1px black" class="center">{{$refundtype->title}}</th>
-            @endforeach
-        <th style="border: solid 1px black" class="center">TOTAL REFUND</th>
+            <th style="border:solid 1px black" class="center">{{$refundtype->title}}</th>
+        @endforeach
+
     </tr>
 
     </thead>
@@ -58,7 +58,7 @@ $days = $days + 1;
     {{--table body --}}
     <tbody>
 
-    <?php $totalamount=0; $grandtotaldeduction = 0; $totalnetamount = 0; $countemp=1;?>
+    <?php $totalamount=0; $grandtotaldeduction = 0; $totalnetamount = 0; $countemp=1; $grandtotalrefund=0;?>
 
     @foreach($payroll->payrollitems->sortByDesc('rate') as $payrollitem)
 
@@ -110,9 +110,9 @@ $days = $days + 1;
 
             @foreach($deductionitems as $deductionitem)
 
-                @php $subtotaldeduction=$payrollitem->deductions->where('deductionitem_id','=',$deductionitem->id)->first()['amount'];@endphp
+                @php $subtotaldeduction=$payrollitem->getdeductionamount($deductionitem->id);@endphp
 
-                <td style="border: solid 1px black" class="right number">{{$subtotaldeduction}}</td>
+                <td style="border: solid 1px black" class="right number">@if($subtotaldeduction==0) - @else {{$subtotaldeduction}} @endif</td>
 
                 <?php $totaldeduction+=$subtotaldeduction; ?>
 
@@ -124,39 +124,37 @@ $days = $days + 1;
 
             </td>
 
+{{--            REFUNDS --}}
 
-
-            {{--refund--}}
-
-            <?php $totalrefund = 0;?>
+            <?php $totalrefund=0; $subtotaldeduction=0; ?>
             @foreach($refundtypes as $refundtype)
                 <td style="border: solid 1px black" class="right number">
+                    @if($payrollitem->getRefundAmount($payrollitem->id,$refundtype->id)!=null)
+                        {{$payrollitem->getRefundAmount($payrollitem->id,$refundtype->id)->amount}}
 
-                    @if($payrollitem->refunds->where('refundtype_id','=',$refundtype->id)->first()['amount']!=null)
+                        <?php $subtotalrefund=$payrollitem->getRefundAmount($payrollitem->id,$refundtype->id)->amount; ?>
 
-                        {{number_format($payrollitem->refunds->where('refundtype_id','=',$refundtype->id)->first()['amount'],2,'.',',')}}
-
-                    @else
-
+                        @else
                         -
-
                     @endif
 
                 </td>
-
+                <?php $totalrefund+=$subtotalrefund; ?>
             @endforeach
 
-            <td style="border: solid 1px black" class="right number">{{number_format($payrollitem->refunds->sum('amount'),2,'.',',')}}</td>
+            <td style="border:solid 1px black" class="right number">{{number_format($payrollitem->refunds->sum('amount'),2,'.',',')}}</td>
 
-            {{--end of refund--}}
+{{--            end of refunds --}}
 
-            <td style="border: solid 1px black" class="right number">{{number_format(($subtotalamount)-$totaldeduction+$payrollitem->refunds->sum('amount'),2,'.',',')}}</td>
 
+            <td style="border: solid 1px black" class="right number">{{number_format($subtotalamount-$totaldeduction+$payrollitem->refunds->sum('amount'),2,'.',',')}}</td>
             <td style="border: solid 1px black">{{$countemp++}}</td>
             <td></td>
 
             <?php $totalamount+=$subtotalamount;
-            $grandtotaldeduction+=$totaldeduction; ?>
+            $grandtotaldeduction+=$totaldeduction;
+            $grandtotalrefund+=$totalrefund;
+            ?>
 
         </tr>
     @endforeach
@@ -165,8 +163,8 @@ $days = $days + 1;
         <td colspan="{{$days+5}}" class="center bolder" style="border: solid 1px black" >TOTAL</td>
 
         {{--@for ($i = 1; $i <= $days; $i++)--}}
-            {{--<td style="border: solid 1px black" >--}}
-            {{--</td>--}}
+        {{--<td style="border: solid 1px black" >--}}
+        {{--</td>--}}
         {{--@endfor--}}
 
         <td style="border: solid 1px black"  class="right bolder number">{{number_format($totalamount,2,'.',',')}}</td>
@@ -180,8 +178,19 @@ $days = $days + 1;
 
             {{--<td style="border: solid 1px black"  class="right bolder">{{number_format($payroll->totaldeduction($deductionitem->id),2,'.',',')}}</td>--}}
         @endforeach
+
+
         <td style="border: solid 1px black"  class="right bolder number">{{number_format($grandtotaldeduction,2,'.',',')}}</td>
-        <td style="border: solid 1px black"  class="right bolder number">{{number_format($totalamount-$grandtotaldeduction,2,'.',',')}}</td>
+
+        @foreach($refundtypes as $refundtype)
+
+            <td style="border: solid 1px black"  class="right bolder number">{{number_format($payroll->getTotalRefund($refundtype->id),2,'.',',')}}</td>
+
+        @endforeach
+
+        <td style="border: solid 1px black"  class="right bolder number">{{number_format($payroll->getGrandTotalRefund(),2,'.',',')}}</td>
+
+        <td style="border: solid 1px black"  class="right bolder number">{{number_format($totalamount-$grandtotaldeduction+$payroll->getGrandTotalRefund(),2,'.',',')}}</td>
         <td style="border: solid 1px black"  class="right bolder"></td>
         <td style="border: solid 1px black"  class="right bolder"></td>
     </tr>

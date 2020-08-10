@@ -44,4 +44,29 @@ class Payrollitem extends Model
         return $this->hasMany('App\Refund');
 
     }
+
+    public function getRefundAmount($payrollitem_id,$id){
+
+        return Refund::where('payrollitem_id','=',$this->id)->where('refundtype_id','=',$id)->first();;
+    }
+
+    public function getdeductionamount($id){
+
+        $deduction = Deduction::where('payrollitem_id','=',$this->id)->where('deductionitem_id','=',$id)->first();
+
+        if($deduction==null)
+            $result = 0;
+        else
+            $result = $deduction['amount'];
+
+        return $result;
+
+    }
+
+    public function getTotalRefund($id){
+
+        return $this->hasMany('App\Refund')->where('refundtype_id','=',$id);
+
+    }
+
 }

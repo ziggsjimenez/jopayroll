@@ -66,15 +66,16 @@
             <?php $__currentLoopData = $refundtypes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $refundtype): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <td>
 
-                            <?php if($payrollitem->refunds->where('refundtype_id','=',$refundtype->id)->first()['amount']!=null): ?>
 
-                                <input class="refundamount" refundtype_id = "<?php echo e($refundtype->id); ?>" payrollitem_id="<?php echo e($payrollitem->id); ?>" style="width:50px;" type="text" value="<?php echo e($payrollitem->refunds->where('refundtype_id','=',$refundtype->id)->first()['amount']); ?>" >
+                            <?php if($payrollitem->getRefundAmount($payrollitem->id,$refundtype->id)==null): ?>
+
+                                <input class="refundamount" refundtype_id="<?php echo e($refundtype->id); ?>" payrollitem_id="<?php echo e($payrollitem->id); ?>" style="width:50px;" type="text">
 
                             <?php else: ?>
 
-                                <input class="refundamount" refundtype_id = "<?php echo e($refundtype->id); ?>" payrollitem_id="<?php echo e($payrollitem->id); ?>" style="width:50px;" type="text" >
+                                <input class="refundamount" refundtype_id="<?php echo e($refundtype->id); ?>" payrollitem_id="<?php echo e($payrollitem->id); ?>" style="width:50px;" type="text" value="<?php echo e($payrollitem->getRefundAmount($payrollitem->id,$refundtype->id)->amount); ?>">
 
-                            <?php endif; ?>
+                                <?php endif; ?>
 
                         </td>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -213,4 +214,5 @@
 
         })
 
-</script><?php /**PATH C:\xampp\htdocs\jopayroll\resources\views/tables/payrollitems.blade.php ENDPATH**/ ?>
+</script>
+<?php /**PATH C:\xampp\htdocs\jopayroll\resources\views/tables/payrollitems.blade.php ENDPATH**/ ?>
