@@ -21,15 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d8eca0c7-8361-41e5-b6b1-f30395047c73" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Payroll.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Payroll.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Payrollitem.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Payrollitem.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/payrolls/print/body_orig.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/payrolls/print/body_orig.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tables/payrollitems.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tables/payrollitems.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/CAFfcJiqL9TTr1dEzdXe8UFVDJcLADa8DuquXXUR" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/1f689a64446e88967a632b2c58f027dfa8a7c77a.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/1f689a64446e88967a632b2c58f027dfa8a7c77a.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/85e3de80b96fa5f0208ff3b107ecc71c5b454345.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/85e3de80b96fa5f0208ff3b107ecc71c5b454345.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/90c94dee54c67c94fd0ca72ad844484eb0fce6e8.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/90c94dee54c67c94fd0ca72ad844484eb0fce6e8.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,12 +152,6 @@
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
-  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -271,6 +257,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597029567214" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597044021895">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597044021895" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597035581686">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

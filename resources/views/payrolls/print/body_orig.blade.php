@@ -130,8 +130,12 @@ $days = $days + 1;
             @foreach($refundtypes as $refundtype)
                 <td style="border: solid 1px black" class="right number">
                     @if($payrollitem->getRefundAmount($payrollitem->id,$refundtype->id)!=null)
-                        {{$payrollitem->getRefundAmount($payrollitem->id,$refundtype->id)->amount}}
 
+                        @if($payrollitem->getRefundAmount($payrollitem->id,$refundtype->id)->amount==0)
+                           -
+                        @else
+                        {{$payrollitem->getRefundAmount($payrollitem->id,$refundtype->id)->amount}}
+                        @endif
                         <?php $subtotalrefund=$payrollitem->getRefundAmount($payrollitem->id,$refundtype->id)->amount; ?>
 
                         @else
@@ -142,7 +146,16 @@ $days = $days + 1;
                 <?php $totalrefund+=$subtotalrefund; ?>
             @endforeach
 
-            <td style="border:solid 1px black" class="right number">{{number_format($payrollitem->refunds->sum('amount'),2,'.',',')}}</td>
+            <td style="border:solid 1px black" class="right number">
+
+                @if($payrollitem->refunds->sum('amount')==0)
+                -
+                @else
+                    {{number_format($payrollitem->refunds->sum('amount'),2,'.',',')}}
+                    @endif
+
+
+            </td>
 
 {{--            end of refunds --}}
 

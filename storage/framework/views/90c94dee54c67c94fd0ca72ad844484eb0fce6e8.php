@@ -132,9 +132,13 @@ $days = $days + 1;
             <?php $__currentLoopData = $refundtypes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $refundtype): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <td style="border: solid 1px black" class="right number">
                     <?php if($payrollitem->getRefundAmount($payrollitem->id,$refundtype->id)!=null): ?>
+
+                        <?php if($payrollitem->getRefundAmount($payrollitem->id,$refundtype->id)->amount==0): ?>
+                           -
+                        <?php else: ?>
                         <?php echo e($payrollitem->getRefundAmount($payrollitem->id,$refundtype->id)->amount); ?>
 
-
+                        <?php endif; ?>
                         <?php $subtotalrefund=$payrollitem->getRefundAmount($payrollitem->id,$refundtype->id)->amount; ?>
 
                         <?php else: ?>
@@ -145,7 +149,17 @@ $days = $days + 1;
                 <?php $totalrefund+=$subtotalrefund; ?>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
-            <td style="border:solid 1px black" class="right number"><?php echo e(number_format($payrollitem->refunds->sum('amount'),2,'.',',')); ?></td>
+            <td style="border:solid 1px black" class="right number">
+
+                <?php if($payrollitem->refunds->sum('amount')==0): ?>
+                -
+                <?php else: ?>
+                    <?php echo e(number_format($payrollitem->refunds->sum('amount'),2,'.',',')); ?>
+
+                    <?php endif; ?>
+
+
+            </td>
 
 
 
