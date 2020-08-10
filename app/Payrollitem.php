@@ -29,6 +29,11 @@ class Payrollitem extends Model
         return $this->hasMany('App\Deduction')->sum('amount');
     }
 
+    public function totalrefunds(){
+
+        return $this->hasMany('App\Refund')->sum('amount');
+    }
+
     public function totalamountdue(){
 
         return $this->rate * $this->days;
@@ -36,7 +41,7 @@ class Payrollitem extends Model
 
     public function nettakehomepay(){
 
-        return $this->totalamountdue()-$this->totaldeductions();
+        return $this->totalamountdue()-$this->totaldeductions()+$this->totaldeductions();
     }
 
     public function refunds (){
