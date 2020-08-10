@@ -1,0 +1,1 @@
+<link href="<?php echo e(asset('public/datatables/datatables.css')); ?>" rel="stylesheet"><?php /**PATH C:\xampp\htdocs\jopayroll\resources\views/layouts/css/datables.blade.php ENDPATH**/ ?>

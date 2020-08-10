@@ -1,0 +1,2 @@
+<script src="<?php echo e(asset('public/js/jquery.js')); ?>"></script>
+<script src="<?php echo e(asset('public/datatables/datatables.min.js')); ?>"></script><?php /**PATH C:\xampp\htdocs\jopayroll\resources\views/layouts/js/datables.blade.php ENDPATH**/ ?>
