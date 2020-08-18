@@ -20,9 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8eca0c7-8361-41e5-b6b1-f30395047c73" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PayrollController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PayrollController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/85e3de80b96fa5f0208ff3b107ecc71c5b454345.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/85e3de80b96fa5f0208ff3b107ecc71c5b454345.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/891bcc75800a87b062863f5eba803e7a2ececa7c.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/891bcc75800a87b062863f5eba803e7a2ececa7c.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/90c94dee54c67c94fd0ca72ad844484eb0fce6e8.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/90c94dee54c67c94fd0ca72ad844484eb0fce6e8.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,12 +159,12 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../voucher" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
+    <property name="nodejs_interpreter_path" value="$PROJECT_DIR$/../../../Program Files/nodejs/node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="nodejs_interpreter_path" value="$PROJECT_DIR$/../../../Program Files/nodejs/node" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -255,13 +258,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597029567214" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1597721369215">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597721369215" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597044021895">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597044021895" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597035581686">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597734594555">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597035581686" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597734594555" />
   </component>
 </project>

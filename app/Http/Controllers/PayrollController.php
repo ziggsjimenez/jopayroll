@@ -134,11 +134,7 @@ class PayrollController extends Controller
     {
         $payroll = Payroll::find($id);
 
-
-
         $appointments = Appointment::where('chargeability_id','=',$payroll->chargeability_id)->get();
-
-//        $employees = Employee::get()->all();
 
         return view ('payrolls.show',compact('payroll','appointments'));
     }
@@ -211,9 +207,9 @@ class PayrollController extends Controller
 
         $deductionitems = Deductionitem::get()->all();
 
+            $refundtypes = Refundtype::get()->all();
 
-
-        $view = view('tables.payrollitems',compact('payroll','deductionitems'))->render();
+        $view = view('tables.payrollitems',compact('payroll','deductionitems','refundtypes'))->render();
 
         return response()->json(['msg'=>'Employee added.']);
         }

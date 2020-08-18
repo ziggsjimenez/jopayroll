@@ -61,6 +61,7 @@
                         <tr>
                             <th>ID</th>
                            <th>Name</th>
+			    <th>Mo. Rate</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -73,6 +74,7 @@
                             <tr>
                                 <td><?php echo e($count++); ?></td>
                                 <td><?php echo e($appemployee->employee->fullname()); ?></td>
+				<td><?php echo e($appemployee->monthlyrate); ?></td>
                                 <td>
                                     <button class="addbtn btn btn-primary" payroll='<?php echo e($payroll->id); ?>' employee='<?php echo e($appemployee->employee->id); ?>'>Add</button>
                                 </td>
