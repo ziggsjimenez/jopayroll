@@ -181,6 +181,33 @@
 
         })
 
+
+$('.dayscontent')
+        .bind('keyup', function() {
+
+//            alert();
+
+            var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+
+            $.ajax({
+
+                url: '{{route('payrollitems.updatenumdays')}}',
+                type: 'POST',
+
+                data: {_token: CSRF_TOKEN,payrollitem_id:$(this).attr('payrollitem_id'),days:$(this).val()},
+                dataType: 'JSON',
+
+                success: function (data) {
+
+                    console.log(data);
+//                    $("#payrollitems").html(data);
+                }
+            });
+
+
+        })
+
+
     $('.refundamount')
         .bind('keyup', function() {
 

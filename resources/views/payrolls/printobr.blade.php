@@ -180,7 +180,7 @@
         <td class="label">Position: </td>
         <td class="center bolder signature">{{$payroll->chargeability->position}}</td>
         <td class="label">Position: </td>
-        <td class="center bolder signature">OIC - Municipal Budget Officer</td>
+        <td class="center bolder signature">Municipal Budget Officer</td>
     </tr>
     <tr>
         <td class="label">Date: </td>

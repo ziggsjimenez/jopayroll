@@ -104,7 +104,7 @@ $days = $days + 1;
             <?php $subtotalamount = $payrollitem->rate * $payrollitem->days; $subtotaldeduction = 0; $totaldeduction = 0;  ?>
 
             <td style="border: solid 1px black"
-                class="center number">{{$payrollitem->days}}</td>
+                class="center number">{{number_format($payrollitem->days,2,'.',',')}</td>
 
             <td style="border: solid 1px black"
                 class="right number">{{number_format($payrollitem->rate,2,'.',',')}}</td>

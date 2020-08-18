@@ -61,6 +61,7 @@
                         <tr>
                             <th>ID</th>
                            <th>Name</th>
+			    <th>Mo. Rate</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -73,6 +74,7 @@
                             <tr>
                                 <td>{{$count++}}</td>
                                 <td>{{$appemployee->employee->fullname()}}</td>
+				<td>{{$appemployee->monthlyrate}}</td>
                                 <td>
                                     <button class="addbtn btn btn-primary" payroll='{{$payroll->id}}' employee='{{$appemployee->employee->id}}'>Add</button>
                                 </td>

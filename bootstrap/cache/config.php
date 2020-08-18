@@ -179,7 +179,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\xampp\\htdocs\\jopayroll\\storage\\framework/cache/data',
+        'path' => '/var/www/bacmanolo/jopayroll/storage/framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -267,8 +267,8 @@
         'host' => '127.0.0.1',
         'port' => '3306',
         'database' => 'jopayroll',
-        'username' => 'root',
-        'password' => '',
+        'username' => 'jigjimenez',
+        'password' => 'MfAdmin@123465',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -287,8 +287,8 @@
         'host' => '127.0.0.1',
         'port' => '3306',
         'database' => 'jopayroll',
-        'username' => 'root',
-        'password' => '',
+        'username' => 'jigjimenez',
+        'password' => 'MfAdmin@123465',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -302,8 +302,8 @@
         'host' => '127.0.0.1',
         'port' => '3306',
         'database' => 'jopayroll',
-        'username' => 'root',
-        'password' => '',
+        'username' => 'jigjimenez',
+        'password' => 'MfAdmin@123465',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -342,10 +342,10 @@
     'orientation' => 'portrait',
     'defines' => 
     array (
-      'font_dir' => 'C:\\xampp\\htdocs\\jopayroll\\storage\\fonts/',
-      'font_cache' => 'C:\\xampp\\htdocs\\jopayroll\\storage\\fonts/',
-      'temp_dir' => 'C:\\Users\\ziggs\\AppData\\Local\\Temp',
-      'chroot' => 'C:\\xampp\\htdocs\\jopayroll',
+      'font_dir' => '/var/www/bacmanolo/jopayroll/storage/fonts/',
+      'font_cache' => '/var/www/bacmanolo/jopayroll/storage/fonts/',
+      'temp_dir' => '/tmp',
+      'chroot' => '/var/www/bacmanolo/jopayroll',
       'enable_font_subsetting' => false,
       'pdf_backend' => 'CPDF',
       'default_media_type' => 'screen',
@@ -368,12 +368,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\xampp\\htdocs\\jopayroll\\storage\\app',
+        'root' => '/var/www/bacmanolo/jopayroll/storage/app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\xampp\\htdocs\\jopayroll\\storage\\app/public',
+        'root' => '/var/www/bacmanolo/jopayroll/storage/app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -390,7 +390,7 @@
     ),
     'links' => 
     array (
-      'C:\\xampp\\htdocs\\jopayroll\\public\\storage' => 'C:\\xampp\\htdocs\\jopayroll\\storage\\app/public',
+      '/var/www/bacmanolo/jopayroll/public/storage' => '/var/www/bacmanolo/jopayroll/storage/app/public',
     ),
   ),
   'hashing' => 
@@ -424,13 +424,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\xampp\\htdocs\\jopayroll\\storage\\logs/laravel.log',
+        'path' => '/var/www/bacmanolo/jopayroll/storage/logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\xampp\\htdocs\\jopayroll\\storage\\logs/laravel.log',
+        'path' => '/var/www/bacmanolo/jopayroll/storage/logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -480,7 +480,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\xampp\\htdocs\\jopayroll\\storage\\logs/laravel.log',
+        'path' => '/var/www/bacmanolo/jopayroll/storage/logs/laravel.log',
       ),
     ),
   ),
@@ -537,7 +537,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\xampp\\htdocs\\jopayroll\\resources\\views/vendor/mail',
+        0 => '/var/www/bacmanolo/jopayroll/resources/views/vendor/mail',
       ),
     ),
   ),
@@ -616,7 +616,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\xampp\\htdocs\\jopayroll\\storage\\framework/sessions',
+    'files' => '/var/www/bacmanolo/jopayroll/storage/framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -636,9 +636,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\jopayroll\\resources\\views',
+      0 => '/var/www/bacmanolo/jopayroll/resources/views',
     ),
-    'compiled' => 'C:\\xampp\\htdocs\\jopayroll\\storage\\framework\\views',
+    'compiled' => '/var/www/bacmanolo/jopayroll/storage/framework/views',
   ),
   'flare' => 
   array (
