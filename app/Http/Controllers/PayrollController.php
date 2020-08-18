@@ -205,7 +205,7 @@ class PayrollController extends Controller
         $payrollitem->payroll_id= $payroll_id;
         $payrollitem->save();
 
-//        generateDeductions($payrollitem->id);
+
 
 
 
