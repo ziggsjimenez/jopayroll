@@ -200,11 +200,6 @@ class PayrollController extends Controller
         $payrollitem->employee_id = $employee_id;
         $payrollitem->payroll_id= $payroll_id;
         $payrollitem->save();
-
-//        generateDeductions($payrollitem->id);
-
-
-
         $deductionitems = Deductionitem::get()->all();
 
             $refundtypes = Refundtype::get()->all();
