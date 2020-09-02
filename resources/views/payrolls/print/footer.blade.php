@@ -35,8 +35,8 @@
 
 
             <div class="center">
-            LEONILA L. PACA<br/>
-        Disbursing Officer<br/>
+            ZORAIDA C. LOZADA<br/>
+        Municipal Treasurer<br/>
                 <p>
                     (2) APPROVED for payment subject to process:<br/>
 

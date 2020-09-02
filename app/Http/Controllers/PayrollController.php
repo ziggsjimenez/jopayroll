@@ -205,15 +205,11 @@ class PayrollController extends Controller
         $payrollitem->payroll_id= $payroll_id;
         $payrollitem->save();
 
-
-
-
+ $refundtypes = Refundtype::get()->all();
 
         $deductionitems = Deductionitem::get()->all();
 
-
-
-        $view = view('tables.payrollitems',compact('payroll','deductionitems'))->render();
+        $view = view('tables.payrollitems',compact('payroll','deductionitems','refundtypes'))->render();
 
         return response()->json(['msg'=>'Employee added.']);
         }
