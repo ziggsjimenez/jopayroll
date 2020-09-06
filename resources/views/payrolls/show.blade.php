@@ -13,8 +13,6 @@
 @section('content')
 
 
-
-
     <a class="btn btn-primary" href="{{route('payrolls.index')}}"><i class="fas fa-arrow-alt-circle-left"></i> BACK</a>
     <a class="btn btn-warning" href="{{route('payrolls.edit',$payroll->id)}}"><i class="fas fa-pen"></i> EDIT</a>
 
@@ -61,6 +59,7 @@
                         <tr>
                             <th>ID</th>
                            <th>Name</th>
+                           <th>Mo. Rate</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -73,6 +72,7 @@
                             <tr>
                                 <td>{{$count++}}</td>
                                 <td>{{$appemployee->employee->fullname()}}</td>
+                                <td>{{$appemployee->monthlyrate}}</td>
                                 <td>
                                     <button class="addbtn btn btn-primary" payroll='{{$payroll->id}}' employee='{{$appemployee->employee->id}}'>Add</button>
                                 </td>
@@ -184,6 +184,8 @@
                 $("#employee_id").val($(this).attr('employee'));
                 $("#myModal").modal();
             });
+
+
 
             $( "#btnsend" ).click(function() {
 
