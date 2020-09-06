@@ -100,7 +100,7 @@
 
         .number{
 
-            font-size:120%;
+            font-size:14px;
         }
 
     </style>
@@ -195,4 +195,5 @@
 
 </body>
 
-</html><?php /**PATH C:\xampp\htdocs\jopayroll\resources\views/payrolls/printpayroll.blade.php ENDPATH**/ ?>
+</html>
+<?php /**PATH C:\xampp\htdocs\jopayroll\resources\views/payrolls/printpayroll.blade.php ENDPATH**/ ?>

@@ -19,16 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8eca0c7-8361-41e5-b6b1-f30395047c73" name="Default Changelist" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/employees/tables/employees.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/employees/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/employees/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/framework/views/de2652b3596169e38217ea837847af5ff76ca101.php" afterPath="$PROJECT_DIR$/storage/framework/views/de2652b3596169e38217ea837847af5ff76ca101.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/framework/views/90c94dee54c67c94fd0ca72ad844484eb0fce6e8.php" afterPath="$PROJECT_DIR$/storage/framework/views/90c94dee54c67c94fd0ca72ad844484eb0fce6e8.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/framework/views/56abf6afb13f2f68b5f40f5b5b22c7c5da24868f.php" afterPath="$PROJECT_DIR$/storage/framework/views/56abf6afb13f2f68b5f40f5b5b22c7c5da24868f.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/reports/employeededuction.blade.php" afterPath="$PROJECT_DIR$/resources/views/reports/employeededuction.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/employees/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/employees/show.blade.php" />
-    </list>
+    <list default="true" id="d8eca0c7-8361-41e5-b6b1-f30395047c73" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,16 +38,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1360">
               <caret line="80" column="23" lean-forward="false" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="preview.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/payrolls/preview.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1683">
-              <caret line="99" column="62" lean-forward="false" selection-start-line="99" selection-start-column="12" selection-end-line="99" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -92,11 +73,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/employees/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="50" column="38" lean-forward="false" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".env" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -116,8 +107,16 @@
         <entry file="file://$PROJECT_DIR$/resources/views/payrolls/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3723">
-              <caret line="219" column="12" lean-forward="false" selection-start-line="149" selection-start-column="6" selection-end-line="219" selection-end-column="12" />
-              <folding />
+              <caret line="221" column="12" lean-forward="false" selection-start-line="187" selection-start-column="0" selection-end-line="221" selection-end-column="12" />
+              <folding>
+                <marker date="1599402225772" expanded="true" signature="6546:7431" ph="{...}" />
+                <marker date="1599402225772" expanded="true" signature="6546:7448" ph="..." />
+                <marker date="1599402225772" expanded="true" signature="6593:7418" ph="{...}" />
+                <marker date="1599402225772" expanded="true" signature="6745:7400" ph="{&quot;url&quot;: '{{url('/payrolls/addemployee')}}'...}" />
+                <marker date="1599402225772" expanded="true" signature="7063:7382" ph="{...}" />
+                <marker date="1599402225772" expanded="true" signature="7109:7186" ph="{...}" />
+                <marker date="1599402225772" expanded="true" signature="7229:7310" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -359,130 +358,6 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="jopayroll">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="jopayroll">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="resources">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="jopayroll">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="resources">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="reports">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="jopayroll">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="resources">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="payrolls">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="jopayroll">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="resources">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="employees">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="jopayroll">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="resources">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="employees">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="tables">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="jopayroll">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="resources">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -1000,12 +875,12 @@
       <workItem from="1598601788891" duration="819000" />
       <workItem from="1598845622468" duration="326000" />
       <workItem from="1599139436226" duration="2429000" />
-      <workItem from="1599401655379" duration="4000" />
+      <workItem from="1599401655379" duration="584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4243000" />
+    <option name="totallyTimeSpent" value="4823000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1067,13 +942,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/ConfirmPasswordController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ChargeabilitiesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1356,9 +1224,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/payrolls/preview.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1683">
-          <caret line="99" column="62" lean-forward="false" selection-start-line="99" selection-start-column="12" selection-end-line="99" selection-end-column="62" />
-          <folding />
+        <state relative-caret-position="1768">
+          <caret line="104" column="62" lean-forward="false" selection-start-line="104" selection-start-column="62" selection-end-line="104" selection-end-column="62" />
+          <folding>
+            <marker date="1599402225744" expanded="true" signature="7308:7392" ph="..." />
+            <marker date="1599402225744" expanded="true" signature="7308:7410" ph="..." />
+            <marker date="1599402225744" expanded="true" signature="7308:7423" ph="..." />
+            <marker date="1599402225744" expanded="true" signature="7512:7775" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1397,8 +1270,16 @@
     <entry file="file://$PROJECT_DIR$/resources/views/payrolls/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3723">
-          <caret line="219" column="12" lean-forward="false" selection-start-line="149" selection-start-column="6" selection-end-line="219" selection-end-column="12" />
-          <folding />
+          <caret line="221" column="12" lean-forward="false" selection-start-line="187" selection-start-column="0" selection-end-line="221" selection-end-column="12" />
+          <folding>
+            <marker date="1599402225772" expanded="true" signature="6546:7431" ph="{...}" />
+            <marker date="1599402225772" expanded="true" signature="6546:7448" ph="..." />
+            <marker date="1599402225772" expanded="true" signature="6593:7418" ph="{...}" />
+            <marker date="1599402225772" expanded="true" signature="6745:7400" ph="{&quot;url&quot;: '{{url('/payrolls/addemployee')}}'...}" />
+            <marker date="1599402225772" expanded="true" signature="7063:7382" ph="{...}" />
+            <marker date="1599402225772" expanded="true" signature="7109:7186" ph="{...}" />
+            <marker date="1599402225772" expanded="true" signature="7229:7310" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1430,6 +1311,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="50" column="38" lean-forward="false" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

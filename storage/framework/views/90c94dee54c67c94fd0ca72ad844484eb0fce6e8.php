@@ -224,7 +224,16 @@ $days = $days + 1;
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
         <td style="border: solid 1px black"
-            class="right bolder number"><?php echo e(number_format($payroll->getGrandTotalRefund(),2,'.',',')); ?></td>
+            class="right bolder number">
+
+
+            <?php if($payroll->getGrandTotalRefund()==0): ?>
+                -
+            <?php else: ?>
+                <?php echo e(number_format($payroll->getGrandTotalRefund(),2,'.',',')); ?>
+
+            <?php endif; ?>
+        </td>
 
         <td style="border: solid 1px black"
             class="right bolder number"><?php echo e(number_format($totalamount-$grandtotaldeduction+$payroll->getGrandTotalRefund(),2,'.',',')); ?></td>
