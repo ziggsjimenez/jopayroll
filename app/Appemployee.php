@@ -6,7 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Appemployee extends Model
 {
-    public function employee(){
+    
+protected $dates = ['datefrom','dateto'];
+
+public function employee(){
 
         return $this->belongsTo('App\Employee');
     }

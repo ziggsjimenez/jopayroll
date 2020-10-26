@@ -186,7 +186,7 @@ class PayrollController extends Controller
 
         // check date does not exceed the appointment end
 
-        if($appemployee->dateto < $payroll->dateto)
+        if($appemployee->dateto->addDays(15) < $payroll->dateto)
 
         {
 

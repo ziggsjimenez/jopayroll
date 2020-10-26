@@ -41,7 +41,7 @@ class Payrollitem extends Model
 
     public function nettakehomepay(){
 
-        return $this->totalamountdue()-$this->totaldeductions()+$this->totaldeductions();
+        return $this->totalamountdue()-$this->totaldeductions()+$this->totalrefunds();
     }
 
     public function refunds (){
