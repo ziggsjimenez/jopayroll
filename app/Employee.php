@@ -32,5 +32,11 @@ class Employee extends Model
 
     }
 
+    public function payrollitems(){
+
+        return $this->hasMany('App\Payrollitem');
+
+    }
+
 
 }

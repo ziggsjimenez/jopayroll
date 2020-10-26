@@ -14,6 +14,7 @@
 
 
         <a class="btn btn-primary" href="{{route('employees.create')}}"><i class="fas fa-plus-circle"></i> ADD </a>
+        <a class="btn btn-primary" href="{{route('viewpayrollitems')}}"><i class="fas fa-search"></i> PAYROLLITEMS </a>
 
         <hr/>
 

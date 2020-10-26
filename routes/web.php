@@ -67,6 +67,10 @@ Route::resource('payrolls','PayrollController');
 
 Route::resource('deductionitems','DeductionitemsController');
 
+//employees
+
+Route::get('/viewpayrollitems','EmployeesController@viewpayrollitems')->name('viewpayrollitems');
+
 
 
 //reports

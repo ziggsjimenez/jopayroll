@@ -137,4 +137,11 @@ class EmployeesController extends Controller
 
 
     }
+
+    public function viewpayrollitems(){
+
+        $employees = Employee::get()->all();
+
+        return view('employees.payrollitems',compact('employees'));
+    }
 }
