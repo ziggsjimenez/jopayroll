@@ -182,7 +182,7 @@ class PayrollController extends Controller
 
         $payroll = Payroll::find($_POST['payroll']);
 
-        $appemployee = Appemployee::where('employee_id','=',$employee_id)->first();
+        $appemployee = Appemployee::where('employee_id','=',$employee_id)->orderBy('id', 'desc')->first();
 
         // check date does not exceed the appointment end
 
