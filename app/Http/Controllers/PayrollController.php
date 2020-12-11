@@ -205,7 +205,7 @@ class PayrollController extends Controller
         $payrollitem->payroll_id= $payroll_id;
         $payrollitem->save();
 
- $refundtypes = Refundtype::get()->all();
+        $refundtypes = Refundtype::get()->all();
 
         $deductionitems = Deductionitem::get()->all();
 
@@ -306,7 +306,7 @@ class PayrollController extends Controller
 
         $deductions = Deduction::get()->all();
 
-        $refundtypes = Refundtype::get()->all();
+        $refundtypes = Refundtype::where('status','Active')->get();
 
         return view ('payrolls.printpayroll',compact('payroll','deductionitems','deductions','refundtypes'));
 

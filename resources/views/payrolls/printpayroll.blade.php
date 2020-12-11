@@ -146,7 +146,7 @@
 
             <div class="page">
 
-@include('payrolls.print.body_orig')
+@include('payrolls.print.body_dec')
 
 
 
