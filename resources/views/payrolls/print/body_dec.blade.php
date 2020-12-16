@@ -218,16 +218,16 @@ $days = $days + 1;
 
         @endforeach
 
-        <td style="border: solid 1px black"
-            class="right bolder number">
+{{--        <td style="border: solid 1px black"--}}
+{{--            class="right bolder number">--}}
 
 
-            @if($payroll->getGrandTotalRefund()==0)
-                -
-            @else
-                {{number_format($payroll->getGrandTotalRefund(),2,'.',',')}}
-            @endif
-        </td>
+{{--            @if($payroll->getGrandTotalRefund()==0)--}}
+{{--                ---}}
+{{--            @else--}}
+{{--                {{number_format($payroll->getGrandTotalRefund(),2,'.',',')}}--}}
+{{--            @endif--}}
+{{--        </td>--}}
 
         <td style="border: solid 1px black"
             class="right bolder number">{{number_format($totalamount-$grandtotaldeduction+$payroll->getGrandTotalRefund(),2,'.',',')}}</td>
