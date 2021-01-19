@@ -19,9 +19,9 @@ class Employee extends Model
         return $this->hasMany('App\Employeededuction');
     }
 
-    public function appemployee(){
+    public function latestappemployee(){
 
-        return $this->hasOne('App\Appemployee');
+        return $this->hasMany('App\Appemployee');
     }
 
     public function payrollitem($id){
