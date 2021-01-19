@@ -19,7 +19,26 @@ class EmployeesController extends Controller
     {
         $employees = Employee::get()->all();
 
+        $this->updateCTCDeduction();
+
         return view ('employees.index',compact('employees'));
+    }
+
+    private function updateCTCDeduction(){
+        $employees = Employee::get()->all();
+        foreach($employees as $employee){
+
+            if($employee->latestappemployee->last()!=null){
+                $gross = $employee->latestappemployee->last()['monthlyrate'] * 12;
+                $employeededuction = new Employeededuction;
+                $employeededuction->employee_id = $employee->id;
+                $employeededuction->deductionitem_id = 9;
+                $employeededuction->amount = ($gross/1000) + 5;
+                $employeededuction->status = "Active";
+                $employeededuction->save();
+            }
+
+        }
     }
 
 
