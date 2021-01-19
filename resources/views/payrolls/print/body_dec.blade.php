@@ -72,7 +72,7 @@ $days = $days + 1;
             <td style="border: solid 1px black">{{$countemp}}</td>
             <td style="border: solid 1px black">{!! $fullname !!}</td>
 
-            <td style="border: solid 1px black">{{$payrollitem->employee->appemployee->designation}}</td>
+            <td style="border: solid 1px black">{{$payrollitem->employee->latestappemployee->last()['designation']}}</td>
 
             <?php $date = $payroll->datefrom; $count = 1 ?>
 
