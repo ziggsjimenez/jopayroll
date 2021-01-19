@@ -16,6 +16,7 @@ use App\Status;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Redirect;
+use DB;
 
 class PayrollController extends Controller
 {
@@ -134,13 +135,23 @@ class PayrollController extends Controller
     {
         $payroll = Payroll::find($id);
 
+        $deductionitems = Deductionitem::where('status','=','Active')->get();
 
+        $refundtypes = Refundtype::get()->all();
+
+        $payrollitems = DB::table('payrollitems')
+            ->select(DB::raw('payrollitems.*'))
+            ->where('payroll_id',$payroll->id)
+            ->get();
+
+
+//        $payrollitems = Payrollitem::where('payroll_id',$payroll->id);
 
         $appointments = Appointment::where('chargeability_id','=',$payroll->chargeability_id)->get();
 
 //        $employees = Employee::get()->all();
 
-        return view ('payrolls.show',compact('payroll','appointments'));
+        return view ('payrolls.show',compact('payroll','appointments','deductionitems','refundtypes','payrollitems'));
     }
 
 
@@ -219,6 +230,8 @@ class PayrollController extends Controller
     public function loadappemployee(Request $request){
 
         $payroll_id = $_POST['payroll'];
+
+//        dd($payroll_id);
 
         $deductionitems = Deductionitem::where('status','=','Active')->get();
 

@@ -11,19 +11,16 @@ class Payroll extends Model
     protected $dates = ['datefrom', 'dateto'];
 
     public function chargeability (){
-
         return $this->belongsTo('App\Chargeability');
     }
 
     public function status(){
-
         return $this->belongsTo('App\Status');
     }
 
     public function payrollitems(){
-
-        return $this->hasManyThrough('App\Payrollitem','App\Employee','id','payroll_id','id','id')->orderBy('employees.lastname','asc');
-
+//        return $this->hasManyThrough('App\Payrollitem','App\Employee','id','payroll_id','id','id')->orderBy('employees.lastname','asc');
+        return $this->hasMany('App\Payrollitem');
     }
 
     public function payrollemployees(){
@@ -79,5 +76,7 @@ class Payroll extends Model
         }
         return $total;
     }
+
+
 
 }
