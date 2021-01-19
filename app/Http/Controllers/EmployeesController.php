@@ -19,7 +19,7 @@ class EmployeesController extends Controller
     {
         $employees = Employee::get()->all();
 
-        $this->updateCTCDeduction();
+//        $this->updateCTCDeduction();
 
         return view ('employees.index',compact('employees'));
     }
