@@ -20,7 +20,7 @@ class EmployeesController extends Controller
         $employees = Employee::get()->all();
 
 //        $this->updateCTCDeduction();
-        $this->updateAnnualTax();
+//        $this->updateAnnualTax();
 
         return view ('employees.index',compact('employees'));
     }
