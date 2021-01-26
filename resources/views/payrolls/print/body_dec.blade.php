@@ -58,7 +58,7 @@ $days = $days + 1;
     {{--table body --}}
     <tbody>
 
-    <?php $totalamount = 0; $grandtotaldeduction = 0; $totalnetamount = 0; $countemp = 1; $grandtotalrefund = 0;?>
+    <?php $linetotal=0; $totalamount = 0; $grandtotaldeduction = 0; $totalnetamount = 0; $countemp = 1; $grandtotalrefund = 0;?>
 
     @foreach($payroll->payrollitems->sortByDesc('rate') as $payrollitem)
 
@@ -171,9 +171,11 @@ $days = $days + 1;
                 class="right number">{{number_format($subtotalamount-$totaldeduction+$payrollitem->refunds->sum('amount'),2,'.',',')}}</td>
             <td style="border: solid 1px black">{{$countemp++}}</td>
 
-            <?php $totalamount += $subtotalamount;
-            $grandtotaldeduction += $totaldeduction;
-            $grandtotalrefund += $totalrefund;
+            <?php $totalamount += round($subtotalamount,2);
+            $grandtotaldeduction += round($totaldeduction,2);
+            $grandtotalrefund += round($totalrefund,2);
+            //total each line
+//            $linetotal += round(($subtotalamount - $totaldeduction) + $totalrefund,2);
             ?>
 
         </tr>
@@ -231,6 +233,7 @@ $days = $days + 1;
 
         <td style="border: solid 1px black"
             class="right bolder number">{{number_format($totalamount-$grandtotaldeduction+$payroll->getGrandTotalRefund(),2,'.',',')}}</td>
+{{--        <td style="border: solid 1px black" class="right bolder">LINE GRANDTOTAL: {{$linetotal}}</td>--}}
         <td style="border: solid 1px black" class="right bolder"></td>
 
     </tr>
