@@ -16,7 +16,7 @@
 <table style="padding-bottom: 5px">
 
     <tr>
-        <td class="center office bolder">{{$payrollitem->employee->appemployee->office->name}}</td>
+        <td class="center office bolder">{{$payrollitem->employee->latestappemployee->last()->office->name}}</td>
     </tr>
 
     <tr>
