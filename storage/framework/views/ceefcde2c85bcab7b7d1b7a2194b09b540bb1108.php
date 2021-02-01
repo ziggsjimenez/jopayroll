@@ -214,7 +214,8 @@
             $('#employeetable').DataTable();
 
 
-            $( ".addbtn" ).click(function() {
+            $(document).on('click', '.addbtn', function(){
+	    //$( ".addbtn" ).click(function() {
                 $("#appointment_id").val($(this).attr('appointment'));
                 $("#employee_id").val($(this).attr('employee'));
                 $("#myModal").modal();

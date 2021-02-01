@@ -127,6 +127,12 @@
                 </div>
                 <div class="card-body">
                     <div id="payrollitems"></div>
+{{--                    {{$payroll->id}}--}}
+{{--                    {{$payroll->payrollitems}}--}}
+{{--                   @foreach($payrollitems as $payrollitem)--}}
+{{--                       {{$payrollitem->id}}--}}
+{{--                       @endforeach--}}
+{{--                    @include('tables.payrollitems')--}}
                 </div>
             </div>
 
@@ -168,6 +174,7 @@
 
                     success: function (data) {
                         $("#payrollitems").html(data);
+                        console.log(data);
                     }
                 });
 

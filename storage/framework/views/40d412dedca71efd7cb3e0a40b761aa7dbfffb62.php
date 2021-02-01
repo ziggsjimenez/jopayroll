@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('customTitle'); ?>
     <?php echo $__env->make('layouts.inc.title',['title'=>'payrolls Index'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <?php $__env->stopSection(); ?>
@@ -21,6 +19,7 @@
 
 
         <a class="btn btn-primary" href="<?php echo e(route('payrolls.create')); ?>"><i class="fas fa-plus-circle"></i> ADD </a>
+        <a class="btn btn-primary" href="<?php echo e(route('payrolls.deductionsummary')); ?>"><i class="fas fa-plus-circle"></i> DEDUCTION SUMMARY </a>
 
         <hr/>
         <?php echo $__env->make('layouts.inc.messages', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

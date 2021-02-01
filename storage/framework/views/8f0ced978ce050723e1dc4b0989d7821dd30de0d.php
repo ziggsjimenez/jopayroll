@@ -35,8 +35,8 @@
 
 
             <div class="center">
-            LEONILA L. PACA<br/>
-        Disbursing Officer<br/>
+            ZORAIDA C. LOZADA<br/>
+        Municipal Treasurer<br/>
                 <p>
                     (2) APPROVED for payment subject to process:<br/>
 
@@ -50,4 +50,5 @@
     <button type="button" onClick="window.print()" style="background: pink">
         PRINT ME!
     </button>
-</div><?php /**PATH C:\xampp\htdocs\jopayroll\resources\views/payrolls/print/footer.blade.php ENDPATH**/ ?>
+</div>
+<?php /**PATH C:\xampp\htdocs\jopayroll\resources\views/payrolls/print/footer.blade.php ENDPATH**/ ?>

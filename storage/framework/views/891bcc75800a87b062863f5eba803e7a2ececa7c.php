@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('customTitle'); ?>
     <?php echo $__env->make('layouts.inc.title',['title'=>'Payrolls Index'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <?php $__env->stopSection(); ?>
@@ -61,6 +59,7 @@
                         <tr>
                             <th>ID</th>
                            <th>Name</th>
+			    <th>Mo. Rate</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -73,6 +72,7 @@
                             <tr>
                                 <td><?php echo e($count++); ?></td>
                                 <td><?php echo e($appemployee->employee->fullname()); ?></td>
+				<td><?php echo e($appemployee->monthlyrate); ?></td>
                                 <td>
                                     <button class="addbtn btn btn-primary" payroll='<?php echo e($payroll->id); ?>' employee='<?php echo e($appemployee->employee->id); ?>'>Add</button>
                                 </td>
@@ -125,6 +125,12 @@
                 </div>
                 <div class="card-body">
                     <div id="payrollitems"></div>
+
+
+
+
+
+
                 </div>
             </div>
 
@@ -166,6 +172,7 @@
 
                     success: function (data) {
                         $("#payrollitems").html(data);
+                        console.log(data);
                     }
                 });
 

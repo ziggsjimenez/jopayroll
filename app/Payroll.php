@@ -8,7 +8,7 @@ class Payroll extends Model
 {
     protected $fillable = ['description','chargeability_id','status_id','datefrom','dateto'];
 
-    protected $dates = ['datefrom', 'dateto'];
+    protected $dates = ['datefrom', 'dateto','created_at'];
 
     public function chargeability (){
         return $this->belongsTo('App\Chargeability');

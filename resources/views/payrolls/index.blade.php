@@ -21,6 +21,7 @@
 
 
         <a class="btn btn-primary" href="{{route('payrolls.create')}}"><i class="fas fa-plus-circle"></i> ADD </a>
+        <a class="btn btn-primary" href="{{route('payrolls.deductionsummary')}}"><i class="fas fa-plus-circle"></i> DEDUCTION SUMMARY </a>
 
         <hr/>
         @include('layouts.inc.messages')

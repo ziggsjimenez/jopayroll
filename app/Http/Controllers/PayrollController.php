@@ -41,6 +41,14 @@ class PayrollController extends Controller
         return view ('payrolls.index',compact('payrolls'));
     }
 
+    public function deductionsummary(){
+
+        $payrolls = Payroll::all();
+        $deductionitems = Deductionitem::all();
+
+        return view('payrolls.deductionsummary',compact('payrolls','deductionitems'));
+    }
+
 
     public function create()
     {

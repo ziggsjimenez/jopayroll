@@ -20,8 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8eca0c7-8361-41e5-b6b1-f30395047c73" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/payrolls/deductionsummary.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/payrolls/print/body_orig.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/payrolls/print/body_orig.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PayrollController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PayrollController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Payroll.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Payroll.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/cache/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/payrolls/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/payrolls/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/payrolls/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/payrolls/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/40d412dedca71efd7cb3e0a40b761aa7dbfffb62.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/40d412dedca71efd7cb3e0a40b761aa7dbfffb62.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/6dc25bfb6f7f942dcaa8fa7a916ab27bbe28b35c.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/6dc25bfb6f7f942dcaa8fa7a916ab27bbe28b35c.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/7da691a709179add51864ae23e6f61df96eaa30f.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/7da691a709179add51864ae23e6f61df96eaa30f.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/85e3de80b96fa5f0208ff3b107ecc71c5b454345.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/85e3de80b96fa5f0208ff3b107ecc71c5b454345.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/891bcc75800a87b062863f5eba803e7a2ececa7c.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/891bcc75800a87b062863f5eba803e7a2ececa7c.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/8f0ced978ce050723e1dc4b0989d7821dd30de0d.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/8f0ced978ce050723e1dc4b0989d7821dd30de0d.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/90c94dee54c67c94fd0ca72ad844484eb0fce6e8.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/90c94dee54c67c94fd0ca72ad844484eb0fce6e8.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/ceefcde2c85bcab7b7d1b7a2194b09b540bb1108.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/ceefcde2c85bcab7b7d1b7a2194b09b540bb1108.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,22 +161,29 @@
       <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
       <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
-      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
-      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
-      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
       <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
     </include_path>
   </component>
+  <component name="ProjectId" id="1lV2PZC2bkR1DrClu1sIydbYGun" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../voucher" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="$PROJECT_DIR$/../../../Program Files/nodejs/node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="nodejs_interpreter_path" value="$PROJECT_DIR$/../../../Program Files/nodejs/node" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -189,6 +212,7 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -234,8 +258,33 @@
       <workItem from="1596810697756" duration="1146000" />
       <workItem from="1596983562608" duration="4683000" />
       <workItem from="1597020224074" duration="3651000" />
+      <workItem from="1604460681910" duration="1811000" />
+      <workItem from="1604475508512" duration="588000" />
+      <workItem from="1604976296183" duration="100000" />
+      <workItem from="1607667915957" duration="2646000" />
+      <workItem from="1607905292014" duration="608000" />
+      <workItem from="1607933353857" duration="611000" />
+      <workItem from="1607955199961" duration="617000" />
+      <workItem from="1607991997044" duration="2605000" />
+      <workItem from="1607995423936" duration="251000" />
+      <workItem from="1608095720377" duration="1789000" />
+      <workItem from="1608167211114" duration="1511000" />
+      <workItem from="1611040784513" duration="3142000" />
+      <workItem from="1611045112485" duration="1695000" />
+      <workItem from="1611212405663" duration="2636000" />
+      <workItem from="1611274914513" duration="2101000" />
+      <workItem from="1611305051604" duration="639000" />
+      <workItem from="1611364106338" duration="1018000" />
+      <workItem from="1611533913957" duration="1222000" />
+      <workItem from="1611562023837" duration="898000" />
+      <workItem from="1611619921767" duration="3002000" />
+      <workItem from="1611814512142" duration="2454000" />
+      <workItem from="1612150883253" duration="3239000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -249,21 +298,11 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597029567214">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1612151103606">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597029567214" />
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597044021895">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597044021895" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597035581686">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597035581686" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1612151103606" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1608096077638" />
   </component>
 </project>

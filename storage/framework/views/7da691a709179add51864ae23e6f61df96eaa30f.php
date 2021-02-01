@@ -100,7 +100,7 @@
 
         .number{
 
-            font-size:120%;
+            font-size:14px;
         }
 
     </style>
@@ -146,7 +146,7 @@
 
             <div class="page">
 
-<?php echo $__env->make('payrolls.print.body_orig', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+<?php echo $__env->make('payrolls.print.body_dec', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 
 
@@ -195,4 +195,5 @@
 
 </body>
 
-</html><?php /**PATH C:\xampp\htdocs\jopayroll\resources\views/payrolls/printpayroll.blade.php ENDPATH**/ ?>
+</html>
+<?php /**PATH C:\xampp\htdocs\jopayroll\resources\views/payrolls/printpayroll.blade.php ENDPATH**/ ?>

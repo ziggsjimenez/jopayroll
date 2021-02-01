@@ -30,7 +30,7 @@ Route::post('/appointments/loadappemployee','AppointmentsController@loadappemplo
 Route::post('/appointments/deleteappemployee','AppointmentsController@deleteappemployee')->name('appointments.deleteappemployee');
 
 //payrolls
-
+Route::get('/deductionsummary','PayrollController@deductionsummary')->name('payrolls.deductionsummary');
 Route::post('/payrolls/addemployee','PayrollController@addemployee')->name('payrolls.addemployee');
 Route::post('/payrolls/loadappemployee','PayrollController@loadappemployee')->name('payrolls.loadappemployee');
 Route::post('/payrolls/deleteappemployee','PayrollController@deleteappemployee')->name('payrolls.deleteappemployee');
@@ -41,6 +41,7 @@ Route::get('/payrolls/sendpayslips/{id}','PayrollController@sendpayslips')->name
 Route::get('/payrolls/printobr/{id}','PayrollController@printobr')->name('payrolls.printobr');
 Route::post('/payrolls/copypayroll','PayrollController@copypayroll')->name('payrolls.copypayroll');
 Route::post('/payrolls/updaterefundamount','PayrollController@updaterefundamount')->name('payrolls.updaterefundamount');
+
 
 //payrollitems
 
