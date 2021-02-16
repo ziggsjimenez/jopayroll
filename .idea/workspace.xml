@@ -20,23 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8eca0c7-8361-41e5-b6b1-f30395047c73" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/payrolls/deductionsummary.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PayrollController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PayrollController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Payroll.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Payroll.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bootstrap/cache/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/payrolls/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/payrolls/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/payrolls/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/payrolls/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/40d412dedca71efd7cb3e0a40b761aa7dbfffb62.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/40d412dedca71efd7cb3e0a40b761aa7dbfffb62.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/6dc25bfb6f7f942dcaa8fa7a916ab27bbe28b35c.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/6dc25bfb6f7f942dcaa8fa7a916ab27bbe28b35c.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/7da691a709179add51864ae23e6f61df96eaa30f.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/7da691a709179add51864ae23e6f61df96eaa30f.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/85e3de80b96fa5f0208ff3b107ecc71c5b454345.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/85e3de80b96fa5f0208ff3b107ecc71c5b454345.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/891bcc75800a87b062863f5eba803e7a2ececa7c.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/891bcc75800a87b062863f5eba803e7a2ececa7c.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/8f0ced978ce050723e1dc4b0989d7821dd30de0d.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/8f0ced978ce050723e1dc4b0989d7821dd30de0d.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/90c94dee54c67c94fd0ca72ad844484eb0fce6e8.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/90c94dee54c67c94fd0ca72ad844484eb0fce6e8.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/ceefcde2c85bcab7b7d1b7a2194b09b540bb1108.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/ceefcde2c85bcab7b7d1b7a2194b09b540bb1108.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/payrolls/printpayslip_edited.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/payrolls/printpayslip_edited.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -175,10 +162,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path" value="$PROJECT_DIR$/../../../Program Files/nodejs/node" />
+    <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -280,6 +269,7 @@
       <workItem from="1611619921767" duration="3002000" />
       <workItem from="1611814512142" duration="2454000" />
       <workItem from="1612150883253" duration="3239000" />
+      <workItem from="1613458545925" duration="357000" />
     </task>
     <servers />
   </component>

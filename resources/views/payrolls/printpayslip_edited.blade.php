@@ -50,7 +50,7 @@
     <tr>
         <td class="title">DEDUCTIONS</td>
     </tr>
-    @foreach($payrollemployee->payrollitem($payroll->id)->deductions as $deduction)
+    @foreach($payrollemployee->payrollitem($payroll->id)->deductions->where('status','Active') as $deduction)
 
         <tr>
             <td class="item">{{$deduction->deductionitem->name}}</td>

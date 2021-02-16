@@ -357,7 +357,7 @@ class PayrollController extends Controller
 
         $payroll = Payroll::find($id);
 
-        $deductionitems = Deductionitem::get()->all();
+        $deductionitems = Deductionitem::where('status','Active')->get();
 
         return view ('payrolls.printpayslips',compact('payroll','deductionitems'));
 
